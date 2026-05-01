@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { DumbbellIcon } from "lucide-react";
 
 const profiles = [
   {
@@ -20,7 +21,7 @@ const profiles = [
 
 export function Programs() {
   return (
-    <section id="para-quem" className="relative overflow-hidden bg-surface py-24 md:py-32">
+    <section id="para-quem" className="relative overflow-hidden bg-surface pb-24 md:pb-32">
       <div className="absolute inset-0 opacity-30" style={{ background: "var(--gradient-glow)" }} />
       <div className="relative mx-auto max-w-7xl px-6">
         <motion.div
@@ -70,7 +71,9 @@ export function Programs() {
           className="mt-16 rounded-md border border-primary/30 bg-background p-8 md:p-12"
         >
           <div className="grid gap-8 md:grid-cols-[auto_1fr] md:items-center md:gap-12">
-            <div className="font-display text-7xl text-primary md:text-8xl">✕</div>
+            <div className="font-display text-7xl text-primary md:text-8xl">
+              <DumbbellIcon className="size-12" />
+            </div>
             <div>
               <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">
                 Diferencial

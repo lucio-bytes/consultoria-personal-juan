@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-trainer.jpg";
 
+const items = [
+  { n: "100%", l: "Personalizado", c: "primary" },
+  { n: "1:1", l: "Acompanhamento", c: "purple" },
+];
+
 export function Hero() {
   return (
     <section id="top" className="relative min-h-screen overflow-hidden bg-background pt-24">
@@ -62,11 +67,7 @@ export function Hero() {
           </div>
 
           <div className="mt-14 grid max-w-xl grid-cols-3 gap-6 border-t border-border pt-8">
-            {[
-              { n: "100%", l: "Personalizado", c: "primary" },
-              { n: "1:1", l: "Acompanhamento", c: "purple" },
-              { n: "+", l: "Evolução real", c: "primary" },
-            ].map((s) => (
+            {items.map((s) => (
               <div key={s.l}>
                 <div
                   className={`font-display text-3xl md:text-4xl ${

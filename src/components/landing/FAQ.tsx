@@ -35,7 +35,7 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section id="faq" className="relative bg-background py-24 md:py-32">
+    <section id="faq" className="relative bg-background pb-24 md:pb-32">
       <div className="mx-auto max-w-3xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

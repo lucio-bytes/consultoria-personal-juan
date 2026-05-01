@@ -53,7 +53,7 @@ const plans = [
 
 export function Plans() {
   return (
-    <section id="planos" className="relative overflow-hidden bg-background py-24 md:py-32">
+    <section id="planos" className="relative overflow-hidden bg-background pb-24 md:pb-32">
       <div className="absolute inset-0 opacity-40" style={{ background: "var(--gradient-glow)" }} />
       <div className="absolute inset-0 bg-grid opacity-30" />
 

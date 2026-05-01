@@ -23,7 +23,6 @@ const results = [
     stats: [
       { l: "Peso", v: "−11 kg" },
       { l: "% gordura", v: "−11%" },
-      { l: "Postura", v: "Recuperada" },
     ],
   },
   {
@@ -41,7 +40,7 @@ const results = [
 
 export function Results() {
   return (
-    <section id="resultados" className="relative bg-background py-24 md:py-32">
+    <section id="resultados" className="relative bg-background pb-24 md:pb-32">
       <div className="mx-auto max-w-7xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -84,10 +83,10 @@ export function Results() {
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                 />
                 <div className="pointer-events-none absolute inset-y-0 left-1/2 w-px bg-secondary/70" />
-                <div className="absolute left-4 top-4 rounded-sm border border-secondary/40 bg-background/80 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest text-purple backdrop-blur-sm">
+                <div className="absolute left-2 bottom-2 rounded-sm border border-secondary/40 bg-background/80 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest text-purple backdrop-blur-sm">
                   Antes
                 </div>
-                <div className="absolute right-4 top-4 rounded-sm bg-primary px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest text-primary-foreground">
+                <div className="absolute right-2 bottom-2 rounded-sm bg-primary px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest text-primary-foreground">
                   Depois
                 </div>
               </div>

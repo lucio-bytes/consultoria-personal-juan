@@ -26,7 +26,7 @@ const specializations = [
 
 export function PersonalTrainer() {
   return (
-    <section id="personal-trainer" className="relative bg-surface py-24 md:py-32">
+    <section id="personal-trainer" className="relative bg-surface pb-24 md:pb-32">
       <div className="absolute inset-0 opacity-20" style={{ background: "var(--gradient-glow)" }} />
 
       <div className="relative mx-auto max-w-7xl px-6">
