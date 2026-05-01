@@ -53,14 +53,8 @@ const plans = [
 
 export function Plans() {
   return (
-    <section
-      id="planos"
-      className="relative overflow-hidden bg-background py-24 md:py-32"
-    >
-      <div
-        className="absolute inset-0 opacity-40"
-        style={{ background: "var(--gradient-glow)" }}
-      />
+    <section id="planos" className="relative overflow-hidden bg-background py-24 md:py-32">
+      <div className="absolute inset-0 opacity-40" style={{ background: "var(--gradient-glow)" }} />
       <div className="absolute inset-0 bg-grid opacity-30" />
 
       <div className="relative mx-auto max-w-7xl px-6">
@@ -79,8 +73,8 @@ export function Plans() {
             <span className="text-primary">jornada</span> ideal pra você.
           </h2>
           <p className="mt-6 text-base text-muted-foreground md:text-lg">
-            Todos os planos incluem treino individualizado, periodização,
-            ajustes contínuos e acompanhamento profissional direto comigo.
+            Todos os planos incluem treino individualizado, periodização, ajustes contínuos e
+            acompanhamento profissional direto comigo.
           </p>
         </motion.div>
 
@@ -108,9 +102,7 @@ export function Plans() {
                 {plan.badge}
               </div>
 
-              <h3 className="mt-6 text-3xl text-foreground md:text-4xl">
-                {plan.name}
-              </h3>
+              <h3 className="mt-6 text-3xl text-foreground md:text-4xl">{plan.name}</h3>
               <p
                 className={`mt-1 text-xs font-bold uppercase tracking-widest ${
                   plan.featured ? "text-primary" : "text-purple"
@@ -125,10 +117,7 @@ export function Plans() {
 
               <ul className="mt-6 flex-1 space-y-3 border-t border-border pt-6">
                 {plan.highlights.map((h) => (
-                  <li
-                    key={h}
-                    className="flex items-start gap-3 text-sm text-foreground"
-                  >
+                  <li key={h} className="flex items-start gap-3 text-sm text-foreground">
                     <span
                       className={`mt-1 inline-block h-1.5 w-1.5 shrink-0 rounded-full ${
                         plan.featured ? "bg-primary" : "bg-secondary"

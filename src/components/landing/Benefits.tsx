@@ -48,14 +48,12 @@ export function Benefits() {
             O que você recebe
           </span>
           <h2 className="mt-4 text-5xl text-foreground md:text-6xl">
-            Tudo que você precisa <span className="text-stroke">para sair</span>{" "}
-            do treino genérico.
+            Tudo que você precisa <span className="text-stroke">para sair</span> do treino genérico.
           </h2>
         </motion.div>
 
         <div className="grid gap-px overflow-hidden rounded-md bg-border md:grid-cols-2 lg:grid-cols-3">
           {items.map((it, i) => {
-            const isPurple = i % 2 === 1;
             return (
               <motion.div
                 key={it.n}
@@ -63,21 +61,11 @@ export function Benefits() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: i * 0.05 }}
-                className="group relative bg-surface p-8 transition-colors hover:bg-surface-elevated md:p-10"
+                className="group relative bg-surface p-8  md:p-10"
               >
-                <div
-                  className={`font-display text-5xl transition-colors ${
-                    isPurple
-                      ? "text-secondary/40 group-hover:text-secondary"
-                      : "text-primary/30 group-hover:text-primary"
-                  }`}
-                >
-                  {it.n}
-                </div>
+                <div className="font-display text-5xl text-primary">{it.n}</div>
                 <h3 className="mt-6 text-2xl text-foreground">{it.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {it.body}
-                </p>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{it.body}</p>
               </motion.div>
             );
           })}

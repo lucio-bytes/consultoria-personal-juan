@@ -44,9 +44,7 @@ export function FAQ() {
           transition={{ duration: 0.6 }}
           className="mb-12 text-center"
         >
-          <span className="text-xs font-bold uppercase tracking-[0.3em] text-purple">
-            FAQ
-          </span>
+          <span className="text-xs font-bold uppercase tracking-[0.3em] text-purple">FAQ</span>
           <h2 className="mt-4 text-5xl text-foreground md:text-6xl">
             Dúvidas que aparecem <br className="md:hidden" />
             <span className="text-purple">antes de começar.</span>

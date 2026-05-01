@@ -3,10 +3,7 @@ import heroImage from "@/assets/hero-trainer.jpg";
 
 export function Hero() {
   return (
-    <section
-      id="top"
-      className="relative min-h-screen overflow-hidden bg-background pt-24"
-    >
+    <section id="top" className="relative min-h-screen overflow-hidden bg-background pt-24">
       <div className="absolute inset-0">
         <img
           src={heroImage}
@@ -15,15 +12,9 @@ export function Hero() {
           height={1920}
           className="h-full w-full object-cover object-[60%_center] opacity-70 md:object-center"
         />
-        <div
-          className="absolute inset-0"
-          style={{ background: "var(--gradient-hero)" }}
-        />
+        <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
         <div className="absolute inset-0 bg-grid opacity-40" />
-        <div
-          className="absolute inset-0"
-          style={{ background: "var(--gradient-glow)" }}
-        />
+        <div className="absolute inset-0" style={{ background: "var(--gradient-glow)" }} />
       </div>
 
       <div className="relative mx-auto flex min-h-[calc(100vh-6rem)] max-w-7xl flex-col justify-center px-6 py-12">
@@ -49,9 +40,9 @@ export function Hero() {
           </h1>
 
           <p className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-            Treinamento personalizado com <strong className="text-foreground">Juan Carvalho</strong> — Personal Trainer.
-            Foco em resultados reais, segurança e evolução contínua, respeitando seu histórico,
-            sua rotina e seus objetivos.
+            Treinamento personalizado com <strong className="text-foreground">Juan Carvalho</strong>{" "}
+            — Personal Trainer. Foco em resultados reais, segurança e evolução contínua, respeitando
+            seu histórico, sua rotina e seus objetivos.
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -60,9 +51,7 @@ export function Hero() {
               className="group inline-flex items-center justify-center rounded-sm bg-primary px-8 py-4 text-sm font-bold uppercase tracking-wider text-primary-foreground transition-all hover:scale-[1.03] hover:shadow-[0_0_40px_var(--primary)]"
             >
               Garantir minha vaga
-              <span className="ml-2 transition-transform group-hover:translate-x-1">
-                →
-              </span>
+              <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
             </a>
             <a
               href="#resultados"

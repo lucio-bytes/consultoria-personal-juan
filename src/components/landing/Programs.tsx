@@ -20,14 +20,8 @@ const profiles = [
 
 export function Programs() {
   return (
-    <section
-      id="para-quem"
-      className="relative overflow-hidden bg-surface py-24 md:py-32"
-    >
-      <div
-        className="absolute inset-0 opacity-30"
-        style={{ background: "var(--gradient-glow)" }}
-      />
+    <section id="para-quem" className="relative overflow-hidden bg-surface py-24 md:py-32">
+      <div className="absolute inset-0 opacity-30" style={{ background: "var(--gradient-glow)" }} />
       <div className="relative mx-auto max-w-7xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -58,12 +52,8 @@ export function Programs() {
               <div className="inline-flex w-fit rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-primary">
                 {p.tag}
               </div>
-              <h3 className="mt-6 text-2xl text-foreground md:text-3xl">
-                {p.title}
-              </h3>
-              <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">
-                {p.body}
-              </p>
+              <h3 className="mt-6 text-2xl text-foreground md:text-3xl">{p.title}</h3>
+              <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">{p.body}</p>
               <div className="mt-8 flex items-center gap-3 border-t border-border pt-6 text-xs font-bold uppercase tracking-widest text-primary transition-transform group-hover:translate-x-1">
                 Esse é você?
                 <span>→</span>
@@ -80,18 +70,15 @@ export function Programs() {
           className="mt-16 rounded-md border border-primary/30 bg-background p-8 md:p-12"
         >
           <div className="grid gap-8 md:grid-cols-[auto_1fr] md:items-center md:gap-12">
-            <div className="font-display text-7xl text-primary md:text-8xl">
-              ✕
-            </div>
+            <div className="font-display text-7xl text-primary md:text-8xl">✕</div>
             <div>
               <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">
                 Diferencial
               </span>
               <p className="mt-3 text-xl leading-snug text-foreground md:text-2xl">
                 O foco não é apenas passar exercícios. É estruturar um{" "}
-                <span className="text-primary">método de treino</span> que gere
-                constância, progresso e resultados sustentáveis ao longo do
-                tempo.
+                <span className="text-primary">método de treino</span> que gere constância,
+                progresso e resultados sustentáveis ao longo do tempo.
               </p>
             </div>
           </div>

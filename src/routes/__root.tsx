@@ -40,7 +40,8 @@ export const Route = createRootRoute({
       { property: "og:title", content: "Juan Carvalho — Personal Trainer" },
       {
         property: "og:description",
-        content: "Treinamento personalizado com método. Resultados reais, segurança e evolução contínua.",
+        content:
+          "Treinamento personalizado com método. Resultados reais, segurança e evolução contínua.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

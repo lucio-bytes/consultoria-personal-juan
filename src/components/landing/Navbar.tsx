@@ -13,22 +13,17 @@ export function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-background/85 backdrop-blur-xl border-b border-border"
-          : "bg-transparent"
+        scrolled ? "bg-background/85 backdrop-blur-xl border-b border-border" : "bg-transparent"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <a href="#top" className="flex items-center gap-3">
-          <img
-            src={logo}
-            alt="Juan Carvalho — Personal Trainer"
-            className="h-12 w-auto md:h-14"
-          />
+          <img src={logo} alt="Juan Carvalho — Personal Trainer" className="h-12 w-auto md:h-14" />
         </a>
         <nav className="hidden items-center gap-8 md:flex">
           {[
             { href: "#metodo", label: "Método" },
+            { href: "#personal-trainer", label: "Personal" },
             { href: "#para-quem", label: "Para quem" },
             { href: "#resultados", label: "Resultados" },
             { href: "#faq", label: "FAQ" },

@@ -55,13 +55,12 @@ export function Results() {
               Alunos reais · Números reais
             </span>
             <h2 className="mt-4 text-5xl text-foreground md:text-6xl">
-              Resultado <br />
-              é o que <span className="text-primary">fala mais alto.</span>
+              Resultado <br />é o que <span className="text-primary">fala mais alto.</span>
             </h2>
           </div>
           <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
-            Sem filtro. Sem foto só de músculo contraído. Pessoas reais que
-            apareceram, fizeram o trabalho e mudaram a relação com o corpo.
+            Sem filtro. Sem foto só de músculo contraído. Pessoas reais que apareceram, fizeram o
+            trabalho e mudaram a relação com o corpo.
           </p>
         </motion.div>
 
@@ -105,9 +104,7 @@ export function Results() {
                 <div className="mt-8 grid grid-cols-3 gap-4 border-t border-border pt-6">
                   {r.stats.map((s) => (
                     <div key={s.l}>
-                      <div className="font-display text-2xl text-primary md:text-3xl">
-                        {s.v}
-                      </div>
+                      <div className="font-display text-2xl text-primary md:text-3xl">{s.v}</div>
                       <div className="mt-1 text-[10px] uppercase tracking-wider text-muted-foreground">
                         {s.l}
                       </div>
