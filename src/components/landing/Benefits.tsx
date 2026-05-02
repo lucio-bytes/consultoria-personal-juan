@@ -35,7 +35,7 @@ const items = [
 
 export function Benefits() {
   return (
-    <section id="metodo" className="relative bg-background pb-24 md:pb-32">
+    <section id="metodo" className="relative bg-background pb-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

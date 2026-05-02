@@ -21,7 +21,7 @@ const profiles = [
 
 export function Programs() {
   return (
-    <section id="para-quem" className="relative overflow-hidden bg-surface pb-24 md:pb-32">
+    <section id="para-quem" className="relative overflow-hidden bg-surface pb-24 md:py-32">
       <div className="absolute inset-0 opacity-30" style={{ background: "var(--gradient-glow)" }} />
       <div className="relative mx-auto max-w-7xl px-6">
         <motion.div

@@ -29,7 +29,7 @@ const quotes = [
 
 export function Testimonials() {
   return (
-    <section id="depoimentos" className="relative overflow-hidden bg-surface pb-24 md:pb-32">
+    <section id="depoimentos" className="relative overflow-hidden bg-surface pb-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
