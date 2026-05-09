@@ -57,26 +57,30 @@ export const StepsSection = () => {
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group relative flex flex-col rounded-md border border-border bg-background p-8 transition-all hover:border-primary/50 hover:shadow-[0_0_40px_-15px_var(--primary)] md:p-10"
               >
-                <div className="mb-6 flex items-center justify-between">
-                  <div className="inline-flex w-fit rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-primary">
-                    Passo 0{index + 1}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex h-full flex-col"
+                >
+                  <div className="mb-6 flex items-center justify-between">
+                    <div className="inline-flex w-fit rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-primary">
+                      Passo 0{index + 1}
+                    </div>
+                    <Icon className="text-primary opacity-80" size={24} />
                   </div>
-                  <Icon className="text-primary opacity-80" size={24} />
-                </div>
 
-                <h3 className="mt-2 text-xl text-foreground md:text-2xl">{step.title}</h3>
-                <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">
-                  {step.description}
-                </p>
-              </motion.div>
+                  <h3 className="mt-2 text-xl text-foreground md:text-2xl">{step.title}</h3>
+                  <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">
+                    {step.description}
+                  </p>
+                </motion.div>
+              </div>
             );
           })}
         </div>

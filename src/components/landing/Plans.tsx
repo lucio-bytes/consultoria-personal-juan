@@ -80,67 +80,71 @@ export function Plans() {
 
         <div className="grid gap-6 md:grid-cols-3">
           {plans.map((plan, i) => (
-            <motion.div
+            <div
               key={plan.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
               className={`relative flex flex-col rounded-md border bg-surface p-8 transition-all md:p-10 ${
                 plan.featured
                   ? "border-primary shadow-[0_0_60px_-15px_var(--primary)] md:scale-[1.03]"
                   : "border-secondary/40 hover:border-secondary hover:shadow-[0_0_40px_-15px_var(--secondary)]"
               }`}
             >
-              <div
-                className={`inline-flex w-fit rounded-full border px-3 py-1 text-[10px] font-bold uppercase tracking-widest ${
-                  plan.featured
-                    ? "border-primary bg-primary text-primary-foreground"
-                    : "border-secondary/60 bg-secondary/15 text-purple"
-                }`}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="flex h-full flex-col"
               >
-                {plan.badge}
-              </div>
+                <div
+                  className={`inline-flex w-fit rounded-full border px-3 py-1 text-[10px] font-bold uppercase tracking-widest ${
+                    plan.featured
+                      ? "border-primary bg-primary text-primary-foreground"
+                      : "border-secondary/60 bg-secondary/15 text-purple"
+                  }`}
+                >
+                  {plan.badge}
+                </div>
 
-              <h3 className="mt-6 text-3xl text-foreground md:text-4xl">{plan.name}</h3>
-              <p
-                className={`mt-1 text-xs font-bold uppercase tracking-widest ${
-                  plan.featured ? "text-primary" : "text-purple"
-                }`}
-              >
-                Duração · {plan.duration}
-              </p>
+                <h3 className="mt-6 text-3xl text-foreground md:text-4xl">{plan.name}</h3>
+                <p
+                  className={`mt-1 text-xs font-bold uppercase tracking-widest ${
+                    plan.featured ? "text-primary" : "text-purple"
+                  }`}
+                >
+                  Duração · {plan.duration}
+                </p>
 
-              <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
-                {plan.description}
-              </p>
+                <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
+                  {plan.description}
+                </p>
 
-              <ul className="mt-6 flex-1 space-y-3 border-t border-border pt-6">
-                {plan.highlights.map((h) => (
-                  <li key={h} className="flex items-start gap-3 text-sm text-foreground">
-                    <span
-                      className={`mt-1 inline-block h-1.5 w-1.5 shrink-0 rounded-full ${
-                        plan.featured ? "bg-primary" : "bg-secondary"
-                      }`}
-                    />
-                    <span>{h}</span>
-                  </li>
-                ))}
-              </ul>
+                <ul className="mt-6 flex-1 space-y-3 border-t border-border pt-6">
+                  {plan.highlights.map((h) => (
+                    <li key={h} className="flex items-start gap-3 text-sm text-foreground">
+                      <span
+                        className={`mt-1 inline-block h-1.5 w-1.5 shrink-0 rounded-full ${
+                          plan.featured ? "bg-primary" : "bg-secondary"
+                        }`}
+                      />
+                      <span>{h}</span>
+                    </li>
+                  ))}
+                </ul>
 
-              <a
-                href={plan.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`mt-8 inline-flex items-center justify-center rounded-sm py-4 text-sm font-bold uppercase tracking-wider transition-all hover:scale-[1.01] ${
-                  plan.featured
-                    ? "bg-primary text-primary-foreground hover:shadow-[0_0_40px_var(--primary)]"
-                    : "border border-secondary bg-secondary/10 text-foreground hover:bg-secondary hover:text-secondary-foreground hover:shadow-[0_0_30px_var(--secondary)]"
-                }`}
-              >
-                {plan.cta} →
-              </a>
-            </motion.div>
+                <a
+                  href={plan.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`mt-8 inline-flex items-center justify-center rounded-sm py-4 text-sm font-bold uppercase tracking-wider transition-all hover:scale-[1.01] ${
+                    plan.featured
+                      ? "bg-primary text-primary-foreground hover:shadow-[0_0_40px_var(--primary)]"
+                      : "border border-secondary bg-secondary/10 text-foreground hover:bg-secondary hover:text-secondary-foreground hover:shadow-[0_0_30px_var(--secondary)]"
+                  }`}
+                >
+                  {plan.cta} →
+                </a>
+              </motion.div>
+            </div>
           ))}
         </div>
 

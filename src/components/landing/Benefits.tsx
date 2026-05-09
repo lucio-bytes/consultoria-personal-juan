@@ -55,18 +55,22 @@ export function Benefits() {
         <div className="grid gap-px overflow-hidden rounded-md bg-border md:grid-cols-2 lg:grid-cols-3">
           {items.map((it, i) => {
             return (
-              <motion.div
+              <div
                 key={it.n}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: i * 0.05 }}
                 className="group relative bg-surface p-8  md:p-10"
               >
-                <div className="font-display text-5xl text-primary">{it.n}</div>
-                <h3 className="mt-6 text-2xl text-foreground">{it.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{it.body}</p>
-              </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5, delay: i * 0.05 }}
+                  className="flex h-full flex-col"
+                >
+                  <div className="font-display text-5xl text-primary">{it.n}</div>
+                  <h3 className="mt-6 text-2xl text-foreground">{it.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{it.body}</p>
+                </motion.div>
+              </div>
             );
           })}
         </div>

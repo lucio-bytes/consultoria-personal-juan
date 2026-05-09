@@ -101,22 +101,25 @@ export function PersonalTrainer() {
 
               <div className="grid gap-px overflow-hidden rounded-md bg-border sm:grid-cols-2">
                 {specializations.map((item, index) => (
-                  <motion.article
+                  <article
                     key={item.title}
-                    initial={{ opacity: 0, y: 24 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-80px" }}
-                    transition={{ duration: 0.5, delay: index * 0.05 }}
                     className="bg-background p-6 md:p-8"
                   >
-                    <div className="text-xs font-bold uppercase tracking-[0.25em] text-primary">
-                      {item.subtitle}
-                    </div>
-                    <h4 className="mt-4 text-xl text-foreground md:text-2xl">{item.title}</h4>
-                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                      {item.body}
-                    </p>
-                  </motion.article>
+                    <motion.div
+                      initial={{ opacity: 0, y: 24 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-80px" }}
+                      transition={{ duration: 0.5, delay: index * 0.05 }}
+                    >
+                      <div className="text-xs font-bold uppercase tracking-[0.25em] text-primary">
+                        {item.subtitle}
+                      </div>
+                      <h4 className="mt-4 text-xl text-foreground md:text-2xl">{item.title}</h4>
+                      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                        {item.body}
+                      </p>
+                    </motion.div>
+                  </article>
                 ))}
               </div>
             </div>

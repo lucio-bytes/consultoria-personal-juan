@@ -42,24 +42,28 @@ export function Programs() {
 
         <div className="grid gap-6 md:grid-cols-3">
           {profiles.map((p, i) => (
-            <motion.div
+            <div
               key={p.tag}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
               className="group relative flex flex-col rounded-md border border-border bg-background p-8 transition-all hover:border-primary/50 hover:shadow-[0_0_40px_-15px_var(--primary)] md:p-10"
             >
-              <div className="inline-flex w-fit rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-primary">
-                {p.tag}
-              </div>
-              <h3 className="mt-6 text-2xl text-foreground md:text-3xl">{p.title}</h3>
-              <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">{p.body}</p>
-              <div className="mt-8 flex items-center gap-3 border-t border-border pt-6 text-xs font-bold uppercase tracking-widest text-primary transition-transform group-hover:translate-x-1">
-                Esse é você?
-                <span>→</span>
-              </div>
-            </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="flex h-full flex-col"
+              >
+                <div className="inline-flex w-fit rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-primary">
+                  {p.tag}
+                </div>
+                <h3 className="mt-6 text-2xl text-foreground md:text-3xl">{p.title}</h3>
+                <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">{p.body}</p>
+                <div className="mt-8 flex items-center gap-3 border-t border-border pt-6 text-xs font-bold uppercase tracking-widest text-primary transition-transform group-hover:translate-x-1">
+                  Esse é você?
+                  <span>→</span>
+                </div>
+              </motion.div>
+            </div>
           ))}
         </div>
       </div>
