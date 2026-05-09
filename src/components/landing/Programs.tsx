@@ -62,30 +62,6 @@ export function Programs() {
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-16 rounded-md border border-primary/30 bg-background p-8 md:p-12"
-        >
-          <div className="grid gap-8 md:grid-cols-[auto_1fr] md:items-center md:gap-12">
-            <div className="font-display text-7xl text-primary md:text-8xl">
-              <DumbbellIcon className="size-12" />
-            </div>
-            <div>
-              <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">
-                Diferencial
-              </span>
-              <p className="mt-3 text-xl leading-snug text-foreground md:text-2xl">
-                O foco não é apenas passar exercícios. É estruturar um{" "}
-                <span className="text-primary">método de treino</span> que gere constância,
-                progresso e resultados sustentáveis ao longo do tempo.
-              </p>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
