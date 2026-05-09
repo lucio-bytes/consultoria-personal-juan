@@ -30,22 +30,32 @@ export function PersonalTrainer() {
       <div className="absolute inset-0 opacity-20" style={{ background: "var(--gradient-glow)" }} />
 
       <div className="relative mx-auto max-w-7xl px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="grid gap-12 md:grid-cols-[1.3fr_1fr] md:items-start"
-        >
-          <div>
+        <div className="grid gap-8 md:grid-cols-12 md:gap-12 lg:gap-16 md:items-start">
+          {/* Mobile Title */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="col-span-12 md:hidden"
+          >
             <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">
               Conheça seu personal trainer
             </span>
-            <h2 className="mt-4 text-4xl text-foreground md:text-6xl">
+            <h2 className="mt-4 text-4xl text-foreground">
               Juan Henrique <span className="text-purple">Argenta Carvalho</span>
             </h2>
+          </motion.div>
 
-            <div className="relative mt-8 max-w-md overflow-hidden rounded-md border border-border bg-background">
+          {/* Left Column: Image */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="col-span-12 md:col-span-5 lg:col-span-4 md:sticky md:top-24"
+          >
+            <div className="relative mx-auto max-w-md md:max-w-full overflow-hidden rounded-md border border-border bg-background">
               <img
                 src={personalJuanImage}
                 alt="Foto do personal trainer Juan Henrique"
@@ -53,52 +63,65 @@ export function PersonalTrainer() {
                 loading="lazy"
               />
             </div>
-          </div>
+          </motion.div>
 
-          <div className="rounded-md border border-border bg-background p-6 md:p-8">
-            <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
-              26 anos, apaixonado por ajudar mulheres a transformarem suas vidas através do
-              exercício físico.
-            </p>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
-              Licenciado e Bacharel em Educação Física, com formação completa para atender suas
-              necessidades de estética e bem-estar.
-            </p>
-          </div>
-        </motion.div>
+          {/* Right Column: Content */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="col-span-12 md:col-span-7 lg:col-span-8"
+          >
+            {/* Desktop Title */}
+            <div className="hidden md:block mb-8 lg:mb-12">
+              <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">
+                Conheça seu personal trainer
+              </span>
+              <h2 className="mt-4 text-5xl lg:text-6xl text-foreground">
+                Juan Henrique <span className="text-purple">Argenta Carvalho</span>
+              </h2>
+            </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="mt-16"
-        >
-          <div className="mb-8">
-            <h3 className="text-3xl text-foreground md:text-4xl">Formação e Especializações</h3>
-          </div>
+            <div className="rounded-md border border-border bg-background p-6 md:p-8">
+              <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
+                26 anos, apaixonado por ajudar mulheres a transformarem suas vidas através do
+                exercício físico.
+              </p>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
+                Licenciado e Bacharel em Educação Física, com formação completa para atender suas
+                necessidades de estética e bem-estar.
+              </p>
+            </div>
 
-          <div className="grid gap-px overflow-hidden rounded-md bg-border md:grid-cols-2">
-            {specializations.map((item, index) => (
-              <motion.article
-                key={item.title}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="bg-background p-8 md:p-10"
-              >
-                <div className="text-xs font-bold uppercase tracking-[0.25em] text-primary">
-                  {item.subtitle}
-                </div>
-                <h4 className="mt-4 text-2xl text-foreground md:text-3xl">{item.title}</h4>
-                <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
-                  {item.body}
-                </p>
-              </motion.article>
-            ))}
-          </div>
-        </motion.div>
+            <div className="mt-12 md:mt-16">
+              <div className="mb-6 md:mb-8">
+                <h3 className="text-3xl text-foreground md:text-4xl">Formação e Especializações</h3>
+              </div>
+
+              <div className="grid gap-px overflow-hidden rounded-md bg-border sm:grid-cols-2">
+                {specializations.map((item, index) => (
+                  <motion.article
+                    key={item.title}
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-80px" }}
+                    transition={{ duration: 0.5, delay: index * 0.05 }}
+                    className="bg-background p-6 md:p-8"
+                  >
+                    <div className="text-xs font-bold uppercase tracking-[0.25em] text-primary">
+                      {item.subtitle}
+                    </div>
+                    <h4 className="mt-4 text-xl text-foreground md:text-2xl">{item.title}</h4>
+                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                      {item.body}
+                    </p>
+                  </motion.article>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
