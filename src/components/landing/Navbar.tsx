@@ -25,6 +25,7 @@ export function Navbar() {
             { href: "#metodo", label: "Método" },
             { href: "#personal-trainer", label: "Personal" },
             { href: "#para-quem", label: "Para quem" },
+            { href: "#metodologia", label: "Metodologia" },
             { href: "#resultados", label: "Resultados" },
             { href: "#faq", label: "FAQ" },
           ].map((l) => (
