@@ -36,7 +36,7 @@ const items = [
 export function Benefits() {
   return (
     <section id="metodo" className="relative bg-background pb-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl md:px-6 px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -47,18 +47,15 @@ export function Benefits() {
           <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">
             O que você recebe
           </span>
-          <h2 className="mt-4 text-5xl text-foreground md:text-6xl">
-            Tudo que você precisa <span className="text-stroke">para sair</span> do treino genérico.
+          <h2 className="mt-4 text-4xl text-balance text-foreground md:text-5xl lg:text-6xl">
+            Tudo que você precisa <span className="text-purple">para sair</span> do treino genérico.
           </h2>
         </motion.div>
 
         <div className="grid gap-px overflow-hidden rounded-md bg-border md:grid-cols-2 lg:grid-cols-3">
           {items.map((it, i) => {
             return (
-              <div
-                key={it.n}
-                className="group relative bg-surface p-8  md:p-10"
-              >
+              <div key={it.n} className="group relative bg-surface p-8  md:p-10">
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}

@@ -36,7 +36,7 @@ const faqs = [
 export function FAQ() {
   return (
     <section id="faq" className="relative bg-background pb-24 md:py-32">
-      <div className="mx-auto max-w-3xl px-6">
+      <div className="mx-auto max-w-3xl md:px-6 px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -45,7 +45,7 @@ export function FAQ() {
           className="mb-12 text-center"
         >
           <span className="text-xs font-bold uppercase tracking-[0.3em] text-purple">FAQ</span>
-          <h2 className="mt-4 text-5xl text-foreground md:text-6xl">
+          <h2 className="mt-4 text-4xl text-balance text-foreground md:text-5xl lg:text-6xl">
             Dúvidas que aparecem <br className="md:hidden" />
             <span className="text-purple">antes de começar.</span>
           </h2>
@@ -56,7 +56,7 @@ export function FAQ() {
             <AccordionItem
               key={i}
               value={`item-${i}`}
-              className="overflow-hidden rounded-md border border-border bg-surface px-6"
+              className="overflow-hidden rounded-md border border-border bg-surface md:px-6 px-4"
             >
               <AccordionTrigger className="text-left text-base tracking-wide text-foreground hover:text-purple hover:no-underline">
                 {f.q}

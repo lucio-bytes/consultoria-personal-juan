@@ -23,7 +23,7 @@ export function Programs() {
   return (
     <section id="para-quem" className="relative overflow-hidden bg-surface pb-24 md:py-32">
       <div className="absolute inset-0 opacity-30" style={{ background: "var(--gradient-glow)" }} />
-      <div className="relative mx-auto max-w-7xl px-6">
+      <div className="relative mx-auto max-w-7xl md:px-6 px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -34,7 +34,7 @@ export function Programs() {
           <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">
             Para quem é
           </span>
-          <h2 className="mt-4 text-5xl text-foreground md:text-6xl">
+          <h2 className="mt-4 text-4xl text-balance text-foreground md:text-5xl lg:text-6xl">
             Independente do <br />
             seu nível, <span className="text-purple">tem espaço aqui.</span>
           </h2>
@@ -57,7 +57,9 @@ export function Programs() {
                   {p.tag}
                 </div>
                 <h3 className="mt-6 text-2xl text-foreground md:text-3xl">{p.title}</h3>
-                <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">{p.body}</p>
+                <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">
+                  {p.body}
+                </p>
                 <div className="mt-8 flex items-center gap-3 border-t border-border pt-6 text-xs font-bold uppercase tracking-widest text-primary transition-transform group-hover:translate-x-1">
                   Esse é você?
                   <span>→</span>

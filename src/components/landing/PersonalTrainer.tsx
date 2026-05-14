@@ -29,9 +29,8 @@ export function PersonalTrainer() {
     <section id="personal-trainer" className="relative bg-surface pb-24 md:py-32">
       <div className="absolute inset-0 opacity-20" style={{ background: "var(--gradient-glow)" }} />
 
-      <div className="relative mx-auto max-w-7xl px-6">
+      <div className="relative mx-auto max-w-7xl md:px-6 px-4">
         <div className="grid gap-8 md:grid-cols-12 md:gap-12 lg:gap-16 md:items-start">
-          {/* Mobile Title */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -42,12 +41,11 @@ export function PersonalTrainer() {
             <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">
               Conheça seu personal trainer
             </span>
-            <h2 className="mt-4 text-4xl text-foreground">
+            <h2 className="mt-4 text-3xl text-balance text-foreground md:text-4xl lg:text-5xl">
               Juan Henrique <span className="text-purple">Argenta Carvalho</span>
             </h2>
           </motion.div>
 
-          {/* Left Column: Image */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -65,7 +63,6 @@ export function PersonalTrainer() {
             </div>
           </motion.div>
 
-          {/* Right Column: Content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -73,12 +70,11 @@ export function PersonalTrainer() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="col-span-12 md:col-span-7 lg:col-span-8"
           >
-            {/* Desktop Title */}
             <div className="hidden md:block mb-8 lg:mb-12">
               <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">
                 Conheça seu personal trainer
               </span>
-              <h2 className="mt-4 text-5xl lg:text-6xl text-foreground">
+              <h2 className="mt-4 text-4xl text-balance text-foreground md:text-5xl lg:text-6xl">
                 Juan Henrique <span className="text-purple">Argenta Carvalho</span>
               </h2>
             </div>
@@ -96,15 +92,12 @@ export function PersonalTrainer() {
 
             <div className="mt-12 md:mt-16">
               <div className="mb-6 md:mb-8">
-                <h3 className="text-3xl text-foreground md:text-4xl">Formação e Especializações</h3>
+                <h3 className="text-2xl text-balance text-foreground sm:text-3xl md:text-4xl">Formação e Especializações</h3>
               </div>
 
               <div className="grid gap-px overflow-hidden rounded-md bg-border sm:grid-cols-2">
                 {specializations.map((item, index) => (
-                  <article
-                    key={item.title}
-                    className="bg-background p-6 md:p-8"
-                  >
+                  <article key={item.title} className="bg-background p-6 md:p-8">
                     <motion.div
                       initial={{ opacity: 0, y: 24 }}
                       whileInView={{ opacity: 1, y: 0 }}

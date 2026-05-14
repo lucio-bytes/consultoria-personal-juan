@@ -57,7 +57,7 @@ export function Plans() {
       <div className="absolute inset-0 opacity-40" style={{ background: "var(--gradient-glow)" }} />
       <div className="absolute inset-0 bg-grid opacity-30" />
 
-      <div className="relative mx-auto max-w-7xl px-6">
+      <div className="relative mx-auto max-w-7xl md:px-6 px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -68,7 +68,7 @@ export function Plans() {
           <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">
             Planos da consultoria
           </span>
-          <h2 className="mt-4 text-5xl text-foreground md:text-6xl">
+          <h2 className="mt-4 text-4xl text-balance text-foreground md:text-5xl lg:text-6xl">
             Escolha o tempo de <br />
             <span className="text-primary">jornada</span> ideal pra você.
           </h2>

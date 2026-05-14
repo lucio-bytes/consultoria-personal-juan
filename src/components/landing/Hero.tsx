@@ -8,7 +8,10 @@ const items = [
 
 export function Hero() {
   return (
-    <section id="top" className="relative min-h-screen overflow-hidden bg-background pt-24">
+    <section
+      id="top"
+      className="relative min-h-screen overflow-hidden bg-background pt-16 md:pt-24"
+    >
       <div className="absolute inset-0">
         <img
           src={heroImage}
@@ -22,7 +25,7 @@ export function Hero() {
         <div className="absolute inset-0" style={{ background: "var(--gradient-glow)" }} />
       </div>
 
-      <div className="relative mx-auto flex min-h-[calc(100vh-6rem)] max-w-7xl flex-col justify-center px-6 py-12">
+      <div className="relative mx-auto flex min-h-[calc(100vh-6rem)] max-w-7xl flex-col justify-center px-4 md:px-6 pt-8 pb-12 md:py-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -36,8 +39,8 @@ export function Hero() {
             </span>
           </div>
 
-          <h1 className="text-[clamp(3rem,9vw,7.5rem)] leading-[0.85] text-foreground">
-            <span className="text-stroke">Treine com</span>
+          <h1 className="text-6xl sm:text-7xl md:text-[6rem] lg:text-[7.5rem] leading-[0.85] text-balance text-foreground">
+            <span className="text-purple">Treine com</span>
             <br />
             método.
             <br />

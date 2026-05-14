@@ -13,10 +13,10 @@ export function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/85 backdrop-blur-xl border-b border-border" : "bg-transparent"
+        scrolled ? "bg-background/45 backdrop-blur-xl border-b border-border" : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-7xl items-center justify-between md:px-6 px-4 py-4">
         <a href="#top" className="flex items-center gap-3">
           <img src={logo} alt="Juan Carvalho — Personal Trainer" className="h-12 w-auto md:h-14" />
         </a>
@@ -40,7 +40,7 @@ export function Navbar() {
         </nav>
         <a
           href="#planos"
-          className="rounded-sm bg-primary px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-primary-foreground transition-all hover:scale-105 hover:shadow-[0_0_30px_var(--primary)]"
+          className="rounded-sm bg-primary px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-primary-foreground transition-all hover:scale-105 shadow-[0_0_40px_var(--primary)]"
         >
           Quero treinar
         </a>

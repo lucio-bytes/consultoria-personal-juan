@@ -32,7 +32,7 @@ export const StepsSection = () => {
   return (
     <section id="metodologia" className="relative overflow-hidden bg-surface pb-24 md:py-32">
       <div className="absolute inset-0 opacity-30" style={{ background: "var(--gradient-glow)" }} />
-      <div className="relative mx-auto max-w-7xl px-6">
+      <div className="relative mx-auto max-w-7xl md:px-6 px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -43,7 +43,7 @@ export const StepsSection = () => {
           <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">
             Metodologia
           </span>
-          <h2 className="mt-4 text-5xl text-foreground md:text-6xl">
+          <h2 className="mt-4 text-4xl text-balance text-foreground md:text-5xl lg:text-6xl">
             O que acontece <br />
             <span className="text-purple">após a compra?</span>
           </h2>

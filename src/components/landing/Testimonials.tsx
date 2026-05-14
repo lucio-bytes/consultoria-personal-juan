@@ -64,13 +64,79 @@ const quotes = [
   },
 ];
 
+function TestimonialCard({
+  q,
+  i,
+  isPurple,
+}: {
+  q: (typeof quotes)[0];
+  i: number;
+  isPurple: boolean;
+}) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const isLong = q.quote.length > 160;
+
+  return (
+    <figure
+      className={`relative rounded-md border bg-background p-8 transition-colors md:p-10 ${
+        isPurple
+          ? "border-secondary/30 hover:border-secondary"
+          : "border-border hover:border-primary/50"
+      }`}
+    >
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.5, delay: i * 0.08 }}
+        className="flex h-full flex-col"
+      >
+        <div
+          className={`font-display text-6xl leading-none ${
+            isPurple ? "text-secondary/60" : "text-primary/40"
+          }`}
+        >
+          "
+        </div>
+        <div className="mb-6 flex-grow">
+          <blockquote
+            className={`mt-2 whitespace-pre-line text-lg leading-relaxed text-foreground transition-all duration-300 ${
+              !isExpanded && isLong ? "line-clamp-4" : ""
+            }`}
+          >
+            {q.quote}
+          </blockquote>
+          {isLong && (
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="mt-3 text-sm font-bold text-primary hover:text-primary/80 transition-colors uppercase tracking-wider"
+            >
+              {isExpanded ? "Ler menos" : "Ler mais"}
+            </button>
+          )}
+        </div>
+        <figcaption className="mt-auto border-t border-border pt-5">
+          <div className="font-bold text-foreground">{q.name}</div>
+          <div
+            className={`mt-0.5 text-xs uppercase tracking-wider ${
+              isPurple ? "text-purple" : "text-muted-foreground"
+            }`}
+          >
+            {q.role}
+          </div>
+        </figcaption>
+      </motion.div>
+    </figure>
+  );
+}
+
 export function Testimonials() {
   const [showAll, setShowAll] = useState(false);
   const displayedQuotes = showAll ? quotes : quotes.slice(0, 3);
 
   return (
     <section id="resultados" className="relative overflow-hidden bg-surface pb-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -81,7 +147,7 @@ export function Testimonials() {
           <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">
             Quem já treina
           </span>
-          <h2 className="mt-4 text-5xl text-foreground md:text-6xl">
+          <h2 className="mt-4 text-4xl text-balance text-foreground md:text-5xl lg:text-6xl">
             Eles fizeram. <br />
             <span className="text-primary">Você também faz.</span>
           </h2>
@@ -90,45 +156,7 @@ export function Testimonials() {
         <div className="grid gap-6 md:grid-cols-2">
           {displayedQuotes.map((q, i) => {
             const isPurple = i % 2 === 1;
-            return (
-              <figure
-                key={q.name}
-                className={`relative rounded-md border bg-background p-8 transition-colors md:p-10 ${
-                  isPurple
-                    ? "border-secondary/30 hover:border-secondary"
-                    : "border-border hover:border-primary/50"
-                }`}
-              >
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.5, delay: i * 0.08 }}
-                  className="flex h-full flex-col"
-                >
-                  <div
-                    className={`font-display text-6xl leading-none ${
-                      isPurple ? "text-secondary/60" : "text-primary/40"
-                    }`}
-                  >
-                    "
-                  </div>
-                  <blockquote className="mt-2 whitespace-pre-line text-lg leading-relaxed text-foreground">
-                    {q.quote}
-                  </blockquote>
-                  <figcaption className="mt-6 border-t border-border pt-5">
-                    <div className="font-bold text-foreground">{q.name}</div>
-                    <div
-                      className={`mt-0.5 text-xs uppercase tracking-wider ${
-                        isPurple ? "text-purple" : "text-muted-foreground"
-                      }`}
-                    >
-                      {q.role}
-                    </div>
-                  </figcaption>
-                </motion.div>
-              </figure>
-            );
+            return <TestimonialCard key={q.name} q={q} i={i} isPurple={isPurple} />;
           })}
         </div>
 
