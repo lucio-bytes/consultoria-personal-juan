@@ -44,6 +44,9 @@ export function PersonalTrainer() {
             <h2 className="mt-4 text-3xl text-balance text-foreground md:text-4xl lg:text-5xl">
               Juan Henrique <span className="text-purple">Argenta Carvalho</span>
             </h2>
+            <p className="mt-2 text-sm font-medium text-muted-foreground">
+              CREF 034301-G/RS
+            </p>
           </motion.div>
 
           <motion.div
@@ -77,6 +80,9 @@ export function PersonalTrainer() {
               <h2 className="mt-4 text-4xl text-balance text-foreground md:text-5xl lg:text-6xl">
                 Juan Henrique <span className="text-purple">Argenta Carvalho</span>
               </h2>
+              <p className="mt-2 text-sm font-medium text-muted-foreground md:text-base">
+                CREF 034301-G/RS
+              </p>
             </div>
 
             <div className="rounded-md border border-border bg-background p-6 md:p-8">

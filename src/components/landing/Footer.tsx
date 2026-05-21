@@ -11,8 +11,9 @@ export function Footer() {
         <a href="#top" className="flex items-center gap-2">
           <img src={logo} alt="Juan Carvalho — Personal Trainer" className="h-12 w-auto" />
         </a>
-        <div className="text-xs uppercase tracking-wider text-muted-foreground">
-          © {new Date().getFullYear()} Juan Carvalho · Personal Trainer
+        <div className="flex flex-col items-center gap-1 text-xs uppercase tracking-wider text-muted-foreground">
+          <span>© {new Date().getFullYear()} Juan Carvalho · Personal Trainer</span>
+          <span>CREF 034301-G/RS</span>
         </div>
         <div className="flex gap-5 text-xs uppercase tracking-wider text-muted-foreground">
           <a
