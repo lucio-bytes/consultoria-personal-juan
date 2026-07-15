@@ -35,7 +35,7 @@ export function Hero() {
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 backdrop-blur-sm">
             <span className="h-2 w-2 animate-pulse rounded-full bg-primary" />
             <span className="text-xs font-bold uppercase tracking-widest text-primary">
-              Vagas limitadas · Turma de Maio
+              Vagas limitadas
             </span>
           </div>
 
